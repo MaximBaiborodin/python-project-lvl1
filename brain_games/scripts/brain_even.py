@@ -2,7 +2,7 @@
 
 import prompt
 
-from random import randint
+import random
 
 
 def main():
@@ -14,22 +14,24 @@ def even_game():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     print("Answer 'yes' if the number is even, otherwise answer 'no'.")
-    i = 0
-    while i < 3:
-        question = randint(1, 100)
+    score = 0
+    while score < 3:
+        question = random.randint(1, 100)
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if question % 2 == 0 and answer == 'yes':
             print('Correct!')
-            i += 1
+            score += 1
         elif question % 2 != 0 and answer == 'no':
             print('Correct!')
-            i += 1
+            score += 1
         elif question % 2 == 0 and answer != 'yes':
-            print(f"{answer} is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}")
+            print(f"{answer} is wrong answer ;(. Correct answer was 'yes'.\
+Let's try again, {name}")
             return
         elif question % 2 != 0 and answer != 'no':
-            print(f"{answer} is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}")
+            print(f"{answer} is wrong answer ;(. Correct answer was 'no'.\
+Let's try again, {name}")
             return
     print(f'Congratulations, {name}!')
 
