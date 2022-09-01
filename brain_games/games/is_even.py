@@ -11,7 +11,8 @@ def even_game():
     print(f'Hello, {name}')
     print("Answer 'yes' if the number is even, otherwise answer 'no'.")
     score = 0
-    while score < 3:
+    winscore = 3
+    while score < winscore:
         question = random.randint(1, 100)
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')

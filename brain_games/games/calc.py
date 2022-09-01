@@ -3,18 +3,15 @@ import prompt
 import random
 
 
-def main():
-    calc_game()
-
-
 def calc_game():
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     print("What is the result of the expression?")
     score = 0
+    winscore = 3
     operator = ['+', '-', '*']
-    while score < 3:
+    while score < winscore:
         num1 = random.randint(1, 10)
         num2 = random.randint(1, 10)
         op = random.choice(operator)
