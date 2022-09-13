@@ -5,7 +5,7 @@ Installing: download this package and type "python3 -m pip install --user dist/*
 First game called "Even or not". Your task is to answer is number even or not. Type "brain-even" to start the game.
 Second game called "Calculation". Your task is to calculate mathematical expression. Type "brain-calc" to start the game.
 Third game called "Greatest common divisor". Your task is to find greatest common divisor for two numbers. Type "brain-gcd" to start the game.
-Forth game called "Progression". Your task is to find missing number in progression. Type "brain-progress" to start the game.
+Forth game called "Progression". Your task is to find missing number in progression. Type "brain-progression" to start the game.
 Fifth game called "Prime". Your task is to answer is number prime or not. Type "brain-prime" to start the game.
  To win just give 3 correct answers in a row).
 
