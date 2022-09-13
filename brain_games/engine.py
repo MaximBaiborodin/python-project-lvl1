@@ -19,7 +19,7 @@ def run(game):
             winscore += 1
         elif answer != user_answer:
             print(f"{user_answer} is wrong answer ;(.")
-            print(f"Correct answer was {answer}. Let's try again, {name}")
+            print(f"Correct answer was {answer}. Let's try again, {name}!")
             break
         if winscore == 3:
             print(f'Congratulations, {name}!')
