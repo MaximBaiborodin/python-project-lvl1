@@ -1,33 +1,12 @@
 #!/usr/bin/env python3
 
-import prompt
-
 import random
 
 
-def even_game():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}')
-    print("Answer 'yes' if the number is even, otherwise answer 'no'.")
-    score = 0
-    winscore = 3
-    while score < winscore:
-        question = random.randint(1, 100)
-        print(f'Question: {question}')
-        answer = prompt.string('Your answer: ')
-        if question % 2 == 0 and answer == 'yes':
-            print('Correct!')
-            score += 1
-        elif question % 2 != 0 and answer == 'no':
-            print('Correct!')
-            score += 1
-        elif question % 2 == 0 and answer != 'yes':
-            print(f"{answer} is wrong answer ;(. Correct answer was 'yes'.\
-Let's try again, {name}")
-            return
-        elif question % 2 != 0 and answer != 'no':
-            print(f"{answer} is wrong answer ;(. Correct answer was 'no'.\
-Let's try again, {name}")
-            return
-    print(f'Congratulations, {name}!')
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
+def get_question_and_answer():
+    question = random.randint(1, 100)
+    answer = "yes" if question % 2 == 0 else "no"
+    return question, answer
