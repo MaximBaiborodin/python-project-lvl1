@@ -8,8 +8,11 @@ DESCRIPTION = 'What number is missing in the progression?'
 def get_question_and_answer():
     start = random.randint(1, 50)
     step = random.randint(2, 10)
-    progression = [str(start + i * step) for i in range(random.randint(5, 15))]
-    answer = str(random.choice(progression))
+    numbers_count = random.randint(5, 15)
+    end = start + (numbers_count * step)
+    progression = list(range(start, end, step))
+    missing_number = random.randint(0, numbers_count - 1)
+    answer = str(progression[missing_number])
     mod_progression = ' '.join(map(str, progression))
     question = mod_progression.replace(answer, '..', 1)
     return question, answer
